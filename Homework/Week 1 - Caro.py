@@ -40,13 +40,6 @@ def mark_square(row, col, player):
 def is_available(row, col):
     return caro[row][col] == 0
 
-def is_full():
-    for row in range(CARO_ROWS):
-        for col in range(CARO_COLS):
-            if caro[row][col] == 0:
-                return False
-    return True
-
 def check_win(player, mi, mj):
     if check_win_vertical(player, mi, mj) or check_win_horizontal(player, mi, mj) or check_win_diogonal_1(player, mi, mj) or check_win_diogonal_2(player, mi, mj):
         return True
