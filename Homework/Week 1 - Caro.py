@@ -7,6 +7,7 @@ CARO_ROWS = 15
 CARO_COLS = 15
 
 font = pygame.font.Font('freesansbold.ttf', 20)
+font12 = pygame.font.Font('freesansbold.ttf', 12)
 
 screen = pygame.display.set_mode((800, 800))
 pygame.display.set_caption('CARO CHESS')
@@ -168,7 +169,8 @@ while True:
                     draw_player()
                     if check_win(player, clicked_row, clicked_col):
                         pygame.draw.rect(screen, (138, 133, 118), (300,0,200,80))
-                        draw_text('X WIN!', font, (0, 0, 0), 365, 30)
+                        draw_text('X WIN!', font, (0, 0, 0), 365, 20)
+                        draw_text('[PRESS R TO RESTART]!', font12, (0, 0, 0), 327, 50)
                         game_over = True
                     player = 2
                 elif player == 2:
@@ -176,7 +178,8 @@ while True:
                     draw_player()
                     if check_win(player, clicked_row, clicked_col):
                         pygame.draw.rect(screen, (138, 133, 118), (300, 0, 200, 80))
-                        draw_text('O WIN!', font, (0, 0, 0), 365, 30)
+                        draw_text('O WIN!', font, (0, 0, 0), 365, 20)
+                        draw_text('[PRESS R TO RESTART]!', font12, (0, 0, 0), 327, 50)
                         game_over = True
                     player = 1
 
